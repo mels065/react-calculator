@@ -1,11 +1,19 @@
 import React, {Component} from 'react';
+import Display from './Display';
 import Button from './Button';
 
 class Calculator extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      operation: []
+    };
+  }
   render() {
     return (
       <div className="Calculator">
-        {/*Display component will go here*/}
+        <Display display={this.state.operation} />
         <div className="button-grid">
           <div className="row">
             <Button val="AC" clickHandler={ () => {} } />
