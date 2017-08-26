@@ -41,6 +41,16 @@ function newOperator(val) {
   });
 }
 
+function clearAll() {
+  this.setState({
+    operation: []
+  });
+}
+
+export {newOperand, newOperator, clearAll};
+
+
+/*PRIVATE FUNCTIONS*/
 function isValidInput(val) {
   let len = this.state.operation.length;
   // decimal rules are handled in another function
@@ -60,5 +70,3 @@ function isValidDecimalPoint(val) {
           this.state.operation[len-1] !== DECIMAL_SYMBOL &&
           this.state.operation[len-2] !== DECIMAL_SYMBOL);
 }
-
-export {newOperand, newOperator};

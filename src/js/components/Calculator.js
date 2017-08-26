@@ -20,35 +20,39 @@ class Calculator extends Component {
     };
   }
   render() {
+    let newOperand  = calc_utils.newOperand.bind(this),
+        newOperator = calc_utils.newOperator.bind(this),
+        clearAll    = calc_utils.clearAll.bind(this);
+
     return (
       <div className="Calculator">
         <Display display={this.state.operation} />
         <div className="button-grid">
           <div className="row">
-            <Button val="AC" clickHandler={ () => {} } />
+            <Button val="AC" clickHandler={clearAll} />
           </div>
           <div className="row">
-            <Button val="7" clickHandler={calc_utils.newOperand.bind(this)} />
-            <Button val="8" clickHandler={calc_utils.newOperand.bind(this)} />
-            <Button val="9" clickHandler={calc_utils.newOperand.bind(this)} />
-            <Button val={DIVIDE_SYMBOL} clickHandler={calc_utils.newOperator.bind(this)} />
+            <Button val="7" clickHandler={newOperand} />
+            <Button val="8" clickHandler={newOperand} />
+            <Button val="9" clickHandler={newOperand} />
+            <Button val={DIVIDE_SYMBOL} clickHandler={newOperator} />
           </div>
           <div className="row">
-            <Button val="4" clickHandler={calc_utils.newOperand.bind(this)} />
-            <Button val="5" clickHandler={calc_utils.newOperand.bind(this)} />
-            <Button val="6" clickHandler={calc_utils.newOperand.bind(this)} />
-            <Button val={MULTIPLY_SYMBOL} clickHandler={calc_utils.newOperator.bind(this)} />
+            <Button val="4" clickHandler={newOperand} />
+            <Button val="5" clickHandler={newOperand} />
+            <Button val="6" clickHandler={newOperand} />
+            <Button val={MULTIPLY_SYMBOL} clickHandler={newOperator} />
           </div>
           <div className="row">
-            <Button val="1" clickHandler={calc_utils.newOperand.bind(this)} />
-            <Button val="2" clickHandler={calc_utils.newOperand.bind(this)} />
-            <Button val="3" clickHandler={calc_utils.newOperand.bind(this)} />
-            <Button val={MINUS_SYMBOL} clickHandler={calc_utils.newOperator.bind(this)} />
+            <Button val="1" clickHandler={newOperand} />
+            <Button val="2" clickHandler={newOperand} />
+            <Button val="3" clickHandler={newOperand} />
+            <Button val={MINUS_SYMBOL} clickHandler={newOperator} />
           </div>
           <div className="row">
-            <Button val="0" clickHandler={calc_utils.newOperand.bind(this)} />
-            <Button val={DECIMAL_SYMBOL} clickHandler={calc_utils.newOperator.bind(this)} />
-            <Button val={ADD_SYMBOL} clickHandler={calc_utils.newOperator.bind(this)} />
+            <Button val="0" clickHandler={newOperand} />
+            <Button val={DECIMAL_SYMBOL} clickHandler={newOperator} />
+            <Button val={ADD_SYMBOL} clickHandler={newOperator} />
             <Button val={EQUAL_SYMBOL} clickHandler={ () => {} } />
           </div>
         </div>

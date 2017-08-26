@@ -135,6 +135,27 @@ describe('newOperator', () => {
   });
 });
 
+describe('clearAll', () => {
+  it('will clear all operators and operands from operation', () => {
+    let mockCalc = createMockCalc();
+
+    calc_utils.newOperand.call(mockCalc, '1');
+    calc_utils.clearAll.call(mockCalc);
+    expect(mockCalc.state.operation.length).toEqual(0);
+
+    [
+      {val: '3', cb: calc_utils.newOperand},
+      {val: '.', cb: calc_utils.newOperator},
+      {val: '7', cb: calc_utils.newOperand},
+      {val: '+', cb: calc_utils.newOperator},
+      {val: '4', cb: calc_utils.newOperand}
+    ]
+    .forEach(function (element) { element.cb.call(mockCalc, element.val) });
+    calc_utils.clearAll.call(mockCalc);
+    expect(mockCalc.state.operation.length).toEqual(0);
+  });
+});
+
 function createMockCalc() {
   return {
     state: {
