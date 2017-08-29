@@ -11,6 +11,8 @@ import {
 } from '../utils/constants';
 import * as calc_utils from '../utils/calculator-util';
 
+import './stylesheets/components/Calculator.css';
+
 class Calculator extends Component {
   constructor(props) {
     super(props);

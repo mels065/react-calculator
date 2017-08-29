@@ -1,0 +1,9 @@
+@import './modules/variables'
+
+.Calculator {
+  background-color: $calculator-color;
+  border-radius: 10%;
+  height: 300px;
+  margin: 50px auto;
+  width: 300px;
+}
