@@ -4,7 +4,7 @@ var plugins = require('gulp-load-plugins')();
 gulp.task('default', ['watch']);
 
 gulp.task('build-css', function() {
-  return gulp.src('src/js/components/stylesheets/*.scss')
+  return gulp.src('src/js/components/stylesheets/sass/*.scss')
     .pipe(plugins.sourcemaps.init())
       .pipe(plugins.sass())
     .pipe(plugins.sourcemaps.write())

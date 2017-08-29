@@ -1,9 +1,10 @@
-@import './modules/variables'
+@import './modules/variables';
 
 .Calculator {
-  background-color: $calculator-color;
-  border-radius: 10%;
-  height: 300px;
-  margin: 50px auto;
-  width: 300px;
+  background-color: $calculator-bg-color;
+  border-radius: $calculator-brdr-rad;
+  height: $calculator-height;
+  margin: $calculator-margin;
+  padding-top: $calculator-padding-top;
+  width: $calculator-width;
 }

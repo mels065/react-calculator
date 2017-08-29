@@ -1,0 +1,9 @@
+@import './modules/variables';
+
+.Display {
+  background-color: $display-bg-color;
+  color: $display-color;
+  height: $display-height;
+  margin: $center;
+  width: $display-width;
+}
