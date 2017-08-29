@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 
+import './stylesheets/components/Button.css'
+
 class Button extends Component {
   render() {
     this.clickHandler = (event) => this.props.clickHandler(event.target.value);
     return (
-      <button value={this.props.val} onClick={this.clickHandler} >{this.props.val}</button>
+      <button className="Button" value={this.props.val} onClick={this.clickHandler} >{this.props.val}</button>
     );
   }
 }

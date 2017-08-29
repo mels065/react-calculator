@@ -1,0 +1,9 @@
+@import './modules/variables';
+
+.Button {
+  height: $button-height;
+  width: $button-width;
+  &[value="AC"] {
+    float: right;
+  }
+}

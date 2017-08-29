@@ -1,15 +1,28 @@
-$calculator-bg-color: #8a8987;
-$display-bg-color: #000;
-
-$display-color: #fff;
+@import url('https://fonts.googleapis.com/css?family=VT323');
 
 $center: 0 auto;
 
+$calculator-bg-color: #8a8987;
+$display-bg-color: #000;
 $calculator-width: 300px;
 $calculator-height: 300px;
 $calculator-padding-top: 5px;
 $calculator-margin: 50px auto;
 $calculator-brdr-rad: 10%;
 
+$display-color: #fff;
+$display-font-size: 24px;
+$display-font-family: 'VT323', monospace;
 $display-height: 10%;
 $display_width: 90%;
+
+$button-grid-height: 80%;
+$button-grid-width: 80%;
+$button-grid-margin-top: $calculator-padding-top;
+
+$button-grid-row-height: 20%;
+
+$button-height: 100%;
+$button-width: 25%;
+
+$copyright-position: 5px;

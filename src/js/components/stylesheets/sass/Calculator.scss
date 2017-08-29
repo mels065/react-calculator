@@ -7,4 +7,13 @@
   margin: $calculator-margin;
   padding-top: $calculator-padding-top;
   width: $calculator-width;
+  .button-grid {
+    height: $button-grid-height;
+    margin: $center;
+    margin-top: $button-grid-margin-top;
+    width: $button-grid-width;
+    .row {
+      height: $button-grid-row-height;
+    }
+  }
 }

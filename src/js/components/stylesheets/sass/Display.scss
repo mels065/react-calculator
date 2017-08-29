@@ -3,7 +3,10 @@
 .Display {
   background-color: $display-bg-color;
   color: $display-color;
+  font-family: $display-font-family;
+  font-size: $display-font-size;
   height: $display-height;
   margin: $center;
+  text-align: left;
   width: $display-width;
 }

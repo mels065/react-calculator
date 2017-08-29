@@ -1,0 +1,11 @@
+@import './modules/variables';
+
+.App {
+  text-align: center;
+}
+
+.copyright {
+  position: absolute;
+  bottom: $copyright-position;
+  right: $copyright-position;
+}

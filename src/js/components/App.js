@@ -8,6 +8,9 @@ class App extends Component {
     return (
       <div className="App">
         <Calculator />
+        <footer>
+          <div className="copyright">Brandon Mellus &copy; (2017)</div>
+        </footer>
       </div>
     );
   }
