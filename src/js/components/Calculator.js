@@ -16,13 +16,16 @@ class Calculator extends Component {
     super(props);
 
     this.state = {
-      operation: []
+      operation: [],
+      justCalculated: false
     };
   }
   render() {
-    let newOperand  = calc_utils.newOperand.bind(this),
-        newOperator = calc_utils.newOperator.bind(this),
-        clearAll    = calc_utils.clearAll.bind(this);
+    let newOperand      = calc_utils.newOperand.bind(this),
+        newOperator     = calc_utils.newOperator.bind(this),
+        newDecimalPoint = calc_utils.newDecimalPoint.bind(this),
+        clearAll        = calc_utils.clearAll.bind(this),
+        calculate       = calc_utils.calculate.bind(this);
 
     return (
       <div className="Calculator">
@@ -51,9 +54,9 @@ class Calculator extends Component {
           </div>
           <div className="row">
             <Button val="0" clickHandler={newOperand} />
-            <Button val={DECIMAL_SYMBOL} clickHandler={newOperator} />
+            <Button val={DECIMAL_SYMBOL} clickHandler={newDecimalPoint} />
             <Button val={ADD_SYMBOL} clickHandler={newOperator} />
-            <Button val={EQUAL_SYMBOL} clickHandler={ () => {} } />
+            <Button val={EQUAL_SYMBOL} clickHandler={calculate} />
           </div>
         </div>
       </div>
