@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import './stylesheets/components/Display.css'
+import './stylesheets/Display.css'
 
 class Display extends Component {
   render() {

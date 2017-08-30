@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Calculator from '../../components/Calculator';
+import Button from '../Button';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<Calculator />, div);
+  ReactDOM.render(<Button />, div);
 });
