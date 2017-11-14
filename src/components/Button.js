@@ -1,14 +1,15 @@
-import React, {Component} from 'react';
+import React from 'react'
 
 import './stylesheets/Button.css'
 
-class Button extends Component {
-  render() {
-    this.clickHandler = (event) => this.props.clickHandler(event.target.value);
-    return (
-      <button className="Button" value={this.props.val} onClick={this.clickHandler} >{this.props.val}</button>
-    );
-  }
+const Button = props => {
+  const clickHandler = event => props.clickHandler(event.target.value)
+
+  return (
+    <button className='Button' value={props.val} onClick={clickHandler}>
+      {props.val}
+    </button>
+  )
 }
 
-export default Button;
+export default Button
